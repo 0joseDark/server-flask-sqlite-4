@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Welcome {{ current_user.username }}</h1>
+    <a href="{{ url_for('terminal') }}">Go to Terminal</a>
+    <a href="{{ url_for('logout') }}">Logout</a>
+</body>
+</html>

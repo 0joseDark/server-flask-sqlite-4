@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Terminal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <form action="{{ url_for('terminal') }}" method="post">
+        <textarea name="command" rows="5" placeholder="Enter command"></textarea>
+        <button type="submit">Run</button>
+    </form>
+    {% if output %}
+        <pre>{{ output }}</pre>
+    {% endif %}
+    <a href="{{ url_for('logout') }}">Logout</a>
+</body>
+</html>
